@@ -39,7 +39,7 @@ def teardown_func(*filepaths):
 
 
 @with_setup(teardown=partial(teardown_func, multires_path))
-def test_csort():
+def test_coarsegrain_no_balance():
     runner = CliRunner()
     result = runner.invoke(
         coarsegrain, [
